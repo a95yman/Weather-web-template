@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Weather UI</title>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <link rel="stylesheet" href="style.css"/>
+    </head>
+    <body>
+    
+        <div id="container">
+        
+            <div id="left">
+            
+                <div id="search-bar" style="margin: 30px auto;">
+                <img src="assets/search.png" class='small-icon'/>
+                    <input type="text" placeholder="Search for laces..."/>
+                    <div style="padding: 5px; border-radius: 50%; background: #eee; display: grid; place-items: center">
+                    <img src="assets/gps.png" class='small-icon'/>
+                    </div>
+                </div>
+                
+                <div style="width: 85%; margin: 0 auto; text-align: center">
+                <img style="margin: 0 auto ;margin-top: 40px; margin-bottom: 40px" src="assets/sun.png" class="big-img"/>
+                </div>
+                
+                <h1 style="margin-bottom: 25px; width: 100%; text-align: center;">12°C</h1>
+                <a style="width: 85%; text-align: left; color: #888; margin-left: 30px"><strong>Monday, </strong>16:00</a>
+                
+                <div style="width: 85%; display: flex; align-items: center; margin-top: 60px; margin-left: 30px">
+                <img src="assets/clouds.png" class="small-icon"/>
+                    <a style="margin-left: 10px">Mostly cloudy</a>
+                    <a></a>
+                </div>
+                <div style="width: 85%; display: flex; align-items: center; margin-top: 10px; margin-left: 30px">
+                <img src="assets/rain.png" class="small-icon"/>
+                    <a style="margin-left: 10px">Rain - 10%</a>
+                    <a></a>
+                </div>
+                
+            </div>
+            
+            <div id="right">
+            
+                <div id="top">
+                
+                    <div id="l">
+                        <h3 style="cursor: pointer;color: #aaa">Today</h3>
+                        <h3 style="margin-left: 20px; border-bottom: 2px solid #444; cursor: pointer">Week</h3>
+                    </div>
+                    
+                    <div id="r">
+                    
+                        
+                        <button>°C</button>
+                        <button>°F</button>
+                        <img id="menu" onclick="ShowSideBar()" class="small-icon" src="assets/menu.png"/>
+                        
+                    </div>
+                    
+                </div>
+                
+                <div id="week">
+                
+                <div class="card">
+                    <div class="inner">
+                    <h4>Sun</h4>
+                        <img src="assets/sun.png" class="medium-img"/>
+                        <div style="width: 80%; display: grid; place-items: center">
+                        <a style="color: #777"><strong>15°</strong> 7°</a>
+                        </div>
+                    </div>
+                    </div>
+                    <div class="card">
+                    <div class="inner">
+                    <h4>Mon</h4>
+                        <img src="assets/clouds.png" class="medium-img"/>
+                        <div style="width: 80%; display: grid; place-items: center">
+                        <a style="color: #777"><strong>5°</strong> 2°</a>
+                        </div>
+                    </div>
+                    </div>
+                    <div class="card">
+                    <div class="inner">
+                    <h4>Tue</h4>
+                        <img src="assets/rain.png" class="medium-img"/>
+                        <div style="width: 80%; display: grid; place-items: center">
+                        <a style="color: #777"><strong>2°</strong> -4°</a>
+                        </div>
+                    </div>
+                    </div>
+                    <div class="card">
+                    <div class="inner">
+                    <h4>Wed</h4>
+                        <img src="assets/sun-rain.png" class="medium-img"/>
+                        <div style="width: 80%; display: grid; place-items: center">
+                        <a style="color: #777"><strong>22°</strong> 8°</a>
+                        </div>
+                    </div>
+                    </div>
+                    <div class="card">
+                    <div class="inner">
+                    <h4>Thu</h4>
+                        <img src="assets/sun-rain.png" class="medium-img"/>
+                        <div style="width: 80%; display: grid; place-items: center">
+                        <a style="color: #777"><strong>23°</strong> 7°</a>
+                        </div>
+                    </div>
+                    </div>
+                    <div class="card">
+                    <div class="inner">
+                    <h4>Fri</h4>
+                        <img src="assets/sun.png" class="medium-img"/>
+                        <div style="width: 80%; display: grid; place-items: center">
+                        <a style="color: #777"><strong>16°</strong> 4°</a>
+                        </div>
+                    </div>
+                    </div>
+                    <div class="card">
+                    <div class="inner">
+                    <h4>Sat</h4>
+                        <img src="assets/sun.png" class="medium-img"/>
+                        <div style="width: 80%; display: grid; place-items: center">
+                        <a style="color: #777"><strong>20°</strong> 5°</a>
+                        </div>
+                    </div>
+                    </div>
+                             
+                
+                </div>
+                
+                <div id="highlights">
+                <h3 style="cursor: default; margin-left: 70px;">Today's highlights</h3>
+                    
+                    <div id="holder">
+                    
+            
+                        <div class="card2">
+                        <div class="inner">
+                            <div style="color: #888; width: 80%; text-align: left; margin-top: 20px">
+                            UV Index
+                            </div>
+                              <div class="progress">
+          <div class="barOverflow">
+            <div class="bar"></div>
+          </div>
+          <strong style="font-size: 30px">34%</strong>
+        </div>
+                            </div>
+                        </div>
+                        
+                        <div class="card2">
+                         <div class="inner">
+                            <div style="color: #888; width: 80%; text-align: left; margin-top: 20px">
+                            Wind Status
+                            </div>
+                             
+                             <a style="width: 80%; text-align: left; font-size: 25px"><strong style="font-size: 60px">7.70</strong> km/h</a>
+                           
+                             <div style="width: 80%;">
+                             
+                                 <div style="padding: 8px; border-radius: 50%; background: #eee; width: 30px; height: 30px; display: grid; place-items: center">
+                                 <img class="small-icon" src="assets/img.png"/>
+                                 </div>
+                             
+                             </div>
+                             
+                            </div>
+                        </div>
+                        
+                        <div class="card2">
+                         <div class="inner">
+                            <div style="color: #888; width: 80%; text-align: left; margin-top: 20px">
+                            Sunrise/Sunset
+                            </div>
+                             
+                            
+                           
+                             <div style="width: 100%; margin-top: 20px">
+                             
+                                 <div style="display: flex; margin-left: 10%;">
+                                 <div style="padding: 8px; border-radius: 50%; background: #eee; width: 20px; height: 20px; display: grid; place-items: center">
+                                 <img class="small-icon" src="assets/up.png"/>
+                                 </div>
+                    <div style="display: flex; flex-direction: column; justify-content: center; width: 100%; margin-left: 10px">
+                     <strong style="width: 80%; text-align: left; font-size: 20px">06:35 am</strong>
+                        <a style="text-align: left; color: #888">-1m 45s</a>
+                                     </div>
+                                 </div>
+                             
+                             </div>
+                             <div style="width: 100%; margin-top: 20px">
+                             
+                                 <div style="display: flex; margin-left: 10%; margin-top: -20px">
+                                 <div style="padding: 8px; border-radius: 50%; background: #eee; width: 20px; height: 20px; display: grid; place-items: center">
+                                 <img class="small-icon" src="assets/up.png" style="transform: rotate(180deg)"/>
+                                 </div>
+                    <div style="display: flex; flex-direction: column; justify-content: center; width: 100%; margin-left: 10px">
+                     <strong style="width: 80%; text-align: left; font-size: 20px">06:35 am</strong>
+                        <a style="text-align: left; color: #888">-1m 45s</a>
+                                     </div>
+                                 </div>
+                             
+                             </div>
+                            
+                            </div>
+                        </div>
+                        
+                       <div class="card2">
+                         <div class="inner">
+                            <div style="color: #888; width: 80%; text-align: left; margin-top: 20px">
+                            Humidity
+                            </div>
+                             
+                             <a style="width: 80%; text-align: left; font-size: 25px"><strong style="font-size: 60px">12</strong> %</a>
+                           
+                             <div style="width: 80%;">
+                             
+                                 <div style="padding: 8px; border-radius: 50%; background: #eee; width: 30px; height: 30px; display: grid; place-items: center">
+                                 <img class="small-icon" src="assets/humidity.png"/>
+                                 </div>
+                             
+                             </div>
+                             <div class="bar-inner">
+                             <div style=""></div>
+                             </div>
+                            </div>
+                        </div>
+                        <div class="card2">
+                         <div class="inner">
+                            <div style="color: #888; width: 80%; text-align: left; margin-top: 20px">
+                            Visibility
+                            </div>
+                             
+                             <a style="width: 80%; text-align: left; font-size: 25px"><strong style="font-size: 60px">5.3</strong> km</a>
+                           
+                             <div style="width: 80%;">
+                             
+                                 <div style="padding: 8px; border-radius: 50%; background: #eee; width: 30px; height: 30px; display: grid; place-items: center">
+                                 <img class="small-icon" src="assets/view.png"/>
+                                 </div>
+                             
+                             </div>
+                            
+                            </div>
+                        </div>
+                      <div class="card2">
+                         <div class="inner">
+                            <div style="color: #888; width: 80%; text-align: left; margin-top: 20px">
+                            Air Quality
+                            </div>
+                             
+                             <a style="width: 80%; text-align: left; font-size: 25px"><strong style="font-size: 60px">105</strong></a>
+                           
+                             <div style="width: 80%;">
+                             
+                                 <div style="padding: 8px; border-radius: 50%; background: #eee; width: 30px; height: 30px; display: grid; place-items: center">
+                                 <img class="small-icon" src="assets/air.png"/>
+                                 </div>
+                             
+                             </div>
+                             <div class="bar-inner">
+                             <div style="margin-top: 30px"></div>
+                             </div>
+                            </div>
+                        </div>
+                    
+                    </div>
+                    
+                </div>
+                
+                
+            </div>
+            
+        </div>
+        
+        <div id="cover"></div>
+        
+        <script type="text/javascript" src="script.js">
+        
+        </script>
+    </body>
+</html>
